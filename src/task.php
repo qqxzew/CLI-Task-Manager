@@ -14,5 +14,5 @@ class Tasks{
     }
 }
 
-$storage = new Tasks();
-$storage->initializeStorage();
+$setStorage = new Tasks();
+$setStorage->initializeStorage();
