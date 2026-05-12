@@ -19,8 +19,18 @@ class Tasks{
             $tasks[] = $argv[2];
             $jsonToSave = json_encode($tasks);
             file_put_contents(PATH_TO_STORAGE, $jsonToSave);
-        
-            
         }
     }   
+
+    function remove($argv){
+        if ($argv[1] =="remove"){
+            $json = file_get_contents(PATH_TO_STORAGE);
+            $tasks = json_decode($json, true);
+            $taskToFind = $argv[2];
+            $key = array_search($taskToFind, $tasks);
+            unset($tasks[$key]);
+            $jsonToSave = json_encode($tasks);
+            file_put_contents(PATH_TO_STORAGE, $jsonToSave);
+        }
+    }
 }

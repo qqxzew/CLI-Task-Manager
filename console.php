@@ -7,3 +7,6 @@ $setStorage->initializeStorage();
 
 $addTask = new Tasks();
 $addTask->add($argv);
+
+$removeTask = new Tasks();
+$removeTask->remove($argv);
