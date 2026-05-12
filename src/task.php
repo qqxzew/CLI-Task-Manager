@@ -33,4 +33,13 @@ class Tasks{
             file_put_contents(PATH_TO_STORAGE, $jsonToSave);
         }
     }
+    function list($argv){
+        if ($argv[1] =="list"){
+            $json = file_get_contents(PATH_TO_STORAGE);
+            $tasks = json_decode($json, true);
+            foreach($tasks as $task){
+                echo $task . "\n";
+            }
+        }
+    }
 }
