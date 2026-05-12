@@ -4,3 +4,6 @@ use TaskManager\Tasks;
 
 $setStorage = new Tasks();
 $setStorage->initializeStorage();
+
+$addTask = new Tasks();
+$addTask->add($argv);
